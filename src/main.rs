@@ -161,7 +161,7 @@ impl Application for MyApp {
     fn render(&self, context: &Context) -> Result<(), wgpu::SurfaceError> {
         let mut frame = Frame::new(context)?;
         {
-            let mut render_pass = frame.begin_render_pass(wgpu::Color {r: 0.9, g: 0.9, b: 0.9, a: 1.0});
+            let mut render_pass = frame.begin_render_pass(wgpu::Color {r: 0.15, g: 0.15, b: 0.2, a: 1.0});
 
             render_pass.set_pipeline(&self.box_pipeline);
             render_pass.set_bind_group(0, &self.camera_bind_group, &[]);
